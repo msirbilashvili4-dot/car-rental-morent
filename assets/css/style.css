@@ -1001,6 +1001,8 @@ section.checkout {
         background-color: var(--background-color);
         form {
             fieldset {
+                margin-bottom: 32px;
+                border-radius:10px;
                 padding:24px;
                 border: none;
                 background-color: var(--white-color);
@@ -1018,28 +1020,116 @@ section.checkout {
                     color: var(--secondary-color);
                 }
                 
-
+                
                 .grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                label {
-                    color: var(--text-dark);
-                    font-weight: 600;
-                    letter-spacing: -2%;
-                    display:block;
-                    text-transform: capitalize;
-                    margin-bottom: 1rem;
+                    label {
+                        color: var(--text-dark);
+                        font-weight: 600;
+                        letter-spacing: -2%;
+                        display:block;
+                        text-transform: capitalize;
+                        padding-block:24px 16px;
+                        
+                    }
+                    input, select {
+                        border: none;
+                        border-radius: 10px;
+                        background-color: var(--background-color);
+                        padding: 1rem 2rem;
+                        color: var(--secondary-color);
+                        text-transform: capitalize;
+                    }
+                    
                 }
-                input {
-                    border: none;
-                    border-radius: 10px;
+                /* pickup section */
+                .radio {
+                    font-size: 1rem;
+                    letter-spacing: -2%;
+                    font-weight: 600;
+                    line-height: 100%;
+                    text-transform: capitalize;
+                }
+                .pickup-dropoff {
+                    padding-top:32px;
+                }
+                
+            /* payment section */
+            .payment-methods {
+                background-color: var(--white-color);
+                margin-block:32px;
+                padding: 24px;
+                border-radius: 10px;
+                input, select {
+                    background-color: var(--white-color);
+                }
+
+                .payment {
                     background-color: var(--background-color);
-                    padding: 1rem 2rem;
+                    margin-bottom:24px;
+                    padding: 24px;
+                    border-radius: 10px;
+                    img {
+                        width: 90px;
+                        height: 20px;
+                    };
+                }
+
+            }
+            /* confirmation */
+            .agree {
+                background-color: var(--background-color);
+                padding: 1rem 45px;
+                margin-block: 24px;
+                border-radius: 10px;
+
+               label {
+                        color: var(--text-dark);
+                        font-weight: 600;
+                        letter-spacing: -2%;
+                        line-height: 150%;                        
+                    }
+            }
+
+            button {
+               background-color: var(--primary-color);
+               padding: 1rem 2rem;
+               color: var(--white-color);
+               font-size: 16px;
+               font-weight: 600;
+               letter-spacing: -2%;
+               line-height:150%;
+               border-radius: 10px;
+               text-transform: capitalize;
+            }
+
+            .confirmed {
+                letter-spacing: -2%;
+                line-height: 150%;
+                img {
+                    margin-block:2rem 1rem;
+                }
+                p {
+                    color:var(--text-dark);
+                    font-weight: 600;
+                    font-size: 16px;
+                    padding-bottom: 8px;
+                }
+                span {
+                    font-size: 14px;
+                    font-weight: 500%;
+                    color: var(--secondary-color);
                 }
             }
+
             }
 
         }
+    }
+
+    aside {
+
     }
 }
 
