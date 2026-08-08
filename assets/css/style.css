@@ -24,9 +24,14 @@ body {}
     justify-content: space-between;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .align-center {
     align-items: center;
 }
+
 
 header {
     display: flex;
@@ -999,6 +1004,8 @@ section.checkout {
     main {
         padding: 32px;
         background-color: var(--background-color);
+        gap: 2rem;
+        
         form {
             fieldset {
                 margin-bottom: 32px;
@@ -1126,10 +1133,187 @@ section.checkout {
             }
 
         }
-    }
+        aside {
+            line-height: 150%;
+            letter-spacing: -2%;
+            padding: 24px;
+            background-color: var(--white-color);
+            border-radius: 10px;
+            /* height: fit-content; */
+            align-self: flex-start;
+            h3 {
+                font-size: 20px;
+                letter-spacing: -3%;
+                font-weight: 700;
+            }  
+            p{
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 4px;
+                color: var(--secondary-color);
+            } 
+            .image-title-wrapper {
+                padding-block: 2rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--secondary-color);
+                
+                .thumbnail {
 
-    aside {
+                    --width: 132px;
+                    --height: 108px;
+                    border-radius: 10px;
+                    width: var(--width);
+                    height: var(--height);
+                    cursor: pointer;
+                    transition-duration: .3s;
+                    padding-inline: 8px;
 
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+
+                    &:first-of-type {
+                        position: relative;
+
+                        background-color: #3563E9;
+                        background-image: url(../images/icons/rectangle.svg);
+                        background-size: 26.5px calc(var(--height)/4);
+                        background-position-x: -5px;
+                        overflow: hidden;
+
+                        img {
+                            object-fit: contain;
+                            position: relative;
+                            z-index: 2;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            top: 46px;
+                            left: 0;
+                            right: 0;
+                            transform: translateY(-50%);
+                            content: "";
+                            background-color: inherit;
+                            background-image: inherit;
+                            background-size: inherit;
+                            background-position-x: 35px;
+                            width: inherit;
+                            height: calc(var(--height) / 4);
+                            display: inline-block;
+                            z-index: 1;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            /* top: calc(var(--height)/3); */
+                            bottom: -17px;
+                            left: 0;
+                            right: 0;
+                            transform: translateY(-50%);
+                            content: "";
+                            background-color: inherit;
+                            background-image: inherit;
+                            background-size: inherit;
+                            background-position-x: 8px;
+                            width: inherit;
+                            height: calc(var(--height) / 4);
+                            display: inline-block;
+                            z-index: 1;
+                        }
+                    }
+
+                   
+                }
+                
+                }
+                h1 {
+                    font-size: 2rem;
+                    letter-spacing: -3%;
+                    margin-bottom: 8px;
+                    font-weight: 700;
+                }
+                .rating {
+                    gap: .5rem;
+                    .stars-wrapper {
+
+    
+                    }
+                    .reviewers-count {
+                        span {
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: var(--secondary-color);             
+                        }
+                    }
+
+                }
+                
+            } 
+            .rental-price {
+                margin-block:2rem;
+                .subtotal, .tax {
+                    span {
+                        &:first-child {
+                            font-weight: 500;
+                            color: var(--secondary-color);
+                        }
+                        &:last-child {
+                            font-weight: 600;
+                            color: var(--text-dark);
+                        }
+    
+                    }
+                }
+            }
+            .promo-wrapper {
+                margin-bottom: 2rem;
+                
+                input {
+                    background-color: var(--background-color);
+                    border: none;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius:10px;
+                    
+                    padding: 1rem 2rem;
+                    flex-grow: 1;
+                }
+                button {
+                    cursor:pointer;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    padding-right: 2rem;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius:10px;
+                    background-color: var(--background-color);
+                }
+            }
+            .total-price {
+                p {
+                    font-size: 20px;
+                    font-weight: 700;
+                    letter-spacing: -3%;
+                    color: var(--text-dark);
+                    
+                }
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: var(--secondary-color);
+                       
+                }
+                >span {
+                    font-weight: 700;
+                    letter-spacing: 0;
+                    font-size: 2rem;
+                    color: var(--text-dark);
+                }
+            } 
+        }
     }
 }
 
