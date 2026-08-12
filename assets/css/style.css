@@ -1000,47 +1000,53 @@ footer {
 
 
 /* checkout form */
+
 section.checkout {
     main {
         padding: 32px;
         background-color: var(--background-color);
         gap: 2rem;
-        
+
         form {
             fieldset {
                 margin-bottom: 32px;
-                border-radius:10px;
-                padding:24px;
+                border-radius: 10px;
+                padding: 24px;
                 border: none;
                 background-color: var(--white-color);
                 line-height: 150%;
-                
+
                 legend {
                     font-size: 20px;
                     letter-spacing: -3%;
                     font-weight: 700;
                 }
-                p, span {
+
+                p,
+                span {
                     font-size: 14px;
                     font-weight: 500;
                     letter-spacing: -2%;
                     color: var(--secondary-color);
                 }
-                
-                
+
+
                 .grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
+
                     label {
                         color: var(--text-dark);
                         font-weight: 600;
                         letter-spacing: -2%;
-                        display:block;
+                        display: block;
                         text-transform: capitalize;
-                        padding-block:24px 16px;
-                        
+                        padding-block: 24px 16px;
+
                     }
-                    input, select {
+
+                    input,
+                    select {
                         border: none;
                         border-radius: 10px;
                         background-color: var(--background-color);
@@ -1048,8 +1054,9 @@ section.checkout {
                         color: var(--secondary-color);
                         text-transform: capitalize;
                     }
-                    
+
                 }
+
                 /* pickup section */
                 .radio {
                     font-size: 1rem;
@@ -1058,81 +1065,92 @@ section.checkout {
                     line-height: 100%;
                     text-transform: capitalize;
                 }
+
                 .pickup-dropoff {
-                    padding-top:32px;
-                }
-                
-            /* payment section */
-            .payment-methods {
-                background-color: var(--white-color);
-                margin-block:32px;
-                padding: 24px;
-                border-radius: 10px;
-                input, select {
-                    background-color: var(--white-color);
+                    padding-top: 32px;
                 }
 
-                .payment {
-                    background-color: var(--background-color);
-                    margin-bottom:24px;
+                /* payment section */
+                .payment-methods {
+                    background-color: var(--white-color);
+                    margin-block: 32px;
                     padding: 24px;
                     border-radius: 10px;
-                    img {
-                        width: 90px;
-                        height: 20px;
-                    };
+
+                    input,
+                    select {
+                        background-color: var(--white-color);
+                    }
+
+                    .payment {
+                        background-color: var(--background-color);
+                        margin-bottom: 24px;
+                        padding: 24px;
+                        border-radius: 10px;
+
+                        img {
+                            width: 90px;
+                            height: 20px;
+                        }
+
+                        ;
+                    }
+
                 }
 
-            }
-            /* confirmation */
-            .agree {
-                background-color: var(--background-color);
-                padding: 1rem 45px;
-                margin-block: 24px;
-                border-radius: 10px;
+                /* confirmation */
+                .agree {
+                    background-color: var(--background-color);
+                    padding: 1rem 45px;
+                    margin-block: 24px;
+                    border-radius: 10px;
 
-               label {
+                    label {
                         color: var(--text-dark);
                         font-weight: 600;
                         letter-spacing: -2%;
-                        line-height: 150%;                        
+                        line-height: 150%;
                     }
-            }
-
-            button {
-               background-color: var(--primary-color);
-               padding: 1rem 2rem;
-               color: var(--white-color);
-               font-size: 16px;
-               font-weight: 600;
-               letter-spacing: -2%;
-               line-height:150%;
-               border-radius: 10px;
-               text-transform: capitalize;
-            }
-
-            .confirmed {
-                letter-spacing: -2%;
-                line-height: 150%;
-                img {
-                    margin-block:2rem 1rem;
                 }
-                p {
-                    color:var(--text-dark);
-                    font-weight: 600;
+
+                button {
+                    background-color: var(--primary-color);
+                    padding: 1rem 2rem;
+                    color: var(--white-color);
                     font-size: 16px;
-                    padding-bottom: 8px;
+                    font-weight: 600;
+                    letter-spacing: -2%;
+                    line-height: 150%;
+                    border-radius: 10px;
+                    text-transform: capitalize;
                 }
-                span {
-                    font-size: 14px;
-                    font-weight: 500%;
-                    color: var(--secondary-color);
+
+                .confirmed {
+                    letter-spacing: -2%;
+                    line-height: 150%;
+
+                    img {
+                        margin-block: 2rem 1rem;
+                    }
+
+                    p {
+                        color: var(--text-dark);
+                        font-weight: 600;
+                        font-size: 16px;
+                        padding-bottom: 8px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 500%;
+                        color: var(--secondary-color);
+                    }
                 }
-            }
 
             }
 
         }
+
         aside {
             line-height: 150%;
             letter-spacing: -2%;
@@ -1141,22 +1159,25 @@ section.checkout {
             border-radius: 10px;
             /* height: fit-content; */
             align-self: flex-start;
+
             h3 {
                 font-size: 20px;
                 letter-spacing: -3%;
                 font-weight: 700;
-            }  
-            p{
+            }
+
+            p {
                 font-size: 14px;
                 font-weight: 500;
                 margin-top: 4px;
                 color: var(--secondary-color);
-            } 
+            }
+
             .image-title-wrapper {
                 padding-block: 2rem;
                 gap: 1rem;
                 border-bottom: 1px solid var(--secondary-color);
-                
+
                 .thumbnail {
 
                     --width: 132px;
@@ -1227,96 +1248,103 @@ section.checkout {
                         }
                     }
 
-                   
-                }
-                
-                }
-                h1 {
-                    font-size: 2rem;
-                    letter-spacing: -3%;
-                    margin-bottom: 8px;
-                    font-weight: 700;
-                }
-                .rating {
-                    gap: .5rem;
-                    .stars-wrapper {
-
-    
-                    }
-                    .reviewers-count {
-                        span {
-                            font-size: 14px;
-                            font-weight: 500;
-                            color: var(--secondary-color);             
-                        }
-                    }
 
                 }
-                
-            } 
+
+            }
+
+            h1 {
+                font-size: 2rem;
+                letter-spacing: -3%;
+                margin-bottom: 8px;
+                font-weight: 700;
+            }
+
+            .rating {
+                gap: .5rem;
+
+                .stars-wrapper {}
+
+                .reviewers-count {
+                    span {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: var(--secondary-color);
+                    }
+                }
+
+            }
+
             .rental-price {
-                margin-block:2rem;
-                .subtotal, .tax {
+                margin-block: 2rem;
+
+                .subtotal,
+                .tax {
                     span {
                         &:first-child {
                             font-weight: 500;
                             color: var(--secondary-color);
                         }
+
                         &:last-child {
                             font-weight: 600;
                             color: var(--text-dark);
                         }
-    
+
                     }
                 }
             }
+
             .promo-wrapper {
                 margin-bottom: 2rem;
-                
+
                 input {
                     background-color: var(--background-color);
                     border: none;
                     border-top-left-radius: 10px;
-                    border-bottom-left-radius:10px;
-                    
+                    border-bottom-left-radius: 10px;
+
                     padding: 1rem 2rem;
                     flex-grow: 1;
                 }
+
                 button {
-                    cursor:pointer;
+                    cursor: pointer;
                     font-weight: 600;
                     text-transform: capitalize;
                     padding-right: 2rem;
                     border-top-right-radius: 10px;
-                    border-bottom-right-radius:10px;
+                    border-bottom-right-radius: 10px;
                     background-color: var(--background-color);
                 }
             }
+
             .total-price {
                 p {
                     font-size: 20px;
                     font-weight: 700;
                     letter-spacing: -3%;
                     color: var(--text-dark);
-                    
+
                 }
+
                 span {
                     font-size: 14px;
                     font-weight: 500;
                     color: var(--secondary-color);
-                       
+
                 }
+
                 >span {
                     font-weight: 700;
                     letter-spacing: 0;
                     font-size: 2rem;
                     color: var(--text-dark);
                 }
-            } 
+            }
         }
     }
 }
-
 
 
 
@@ -1423,8 +1451,26 @@ section.checkout {
                     display: block;
                 }
             }
+
+            &.expanded {
+                flex-direction: column-reverse;
+                position: absolute;
+                right: calc(5% - 1rem);
+                top: calc(40px - 1rem);
+                padding: 1rem;
+                background-color: rgb(130 144 212 / 20%);
+                border-radius: 34px;
+                backdrop-filter: blur(13px);
+                z-index: 2;
+
+                .cta {
+                    display: block;
+                }
+            }
         }
+
     }
+
     section.ads {
         article.ad {
             line-height: 120%;
@@ -1434,25 +1480,28 @@ section.checkout {
                 font-size: 28px;
                 margin-bottom: .5rem;
             }
+
             p {
                 font-size: 14px;
-                margin-bottom: .5rem;               
+                margin-bottom: .5rem;
             }
+
             button {
                 padding: 5px 10px;
             }
+
             img {
                 width: 70%;
             }
         }
-        
+
     }
 }
 
 @media (max-width: 860px) {
     header {
         height: 200px;
-        position: relative;
+        /* position: relative; */
 
         .logo-search-wrapper {
             .logo {
@@ -1480,7 +1529,7 @@ section.checkout {
             }
         }
 
-        .cta-wrapper {
+        /* .cta-wrapper {
 
             position: absolute;
             right: 0;
@@ -1488,7 +1537,7 @@ section.checkout {
 
 
 
-        }
+        } */
     }
 }
 
@@ -1513,9 +1562,11 @@ section.checkout {
 
     section.ads {
         justify-content: center;
+
         article.ad {
             width: 90%;
-            &:last-child{
+
+            &:last-child {
                 display: none;
             }
         }
@@ -1590,4 +1641,3 @@ section.checkout {
         }
     }
 }
-

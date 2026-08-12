@@ -1,7 +1,54 @@
 let currentPage = window.location.pathname
-
-
 currentPage = currentPage.split('/')[1].split('.html')[0]
+
+const mobileMenu = document.querySelector('#mobile-menu')
+const ctaWrapper = document.querySelector('.cta-wrapper')
+
+
+mobileMenu.addEventListener('click', handleMenuClick)
+
+
+
+
+
+
+function handleMenuClick() {
+    console.log('menu button clicked');
+    if (ctaWrapper.classList.contains('expanded')) {
+
+        ctaWrapper.classList.remove('expanded')
+    } else {
+        ctaWrapper.classList.add('expanded')
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
