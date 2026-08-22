@@ -28,6 +28,10 @@ body {}
     justify-content: center;
 }
 
+.justify-end {
+    justify-content: flex-end;
+}
+
 .align-center {
     align-items: center;
 }
@@ -885,6 +889,11 @@ section.details-page {
                             line-height: 200%;
                             font-weight: 400;
                         }
+                        button.read-more-btn {
+                            display: none;
+                            margin: 0;
+                            
+                        }
 
                     }
                 }
@@ -1603,6 +1612,31 @@ section.checkout {
         }
     }
 
+    section.details-page {
+        & .details {
+            & section.reviews {
+                & .reviews-wrapper {
+                    & li {
+                        & article {
+                            p {
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                &.expand{-webkit-line-clamp: unset;}
+                            }
+                            button.read-more-btn {
+                                display:block;
+                                padding: 2px;
+                                text-transform: capitalize;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 
 }
@@ -1616,47 +1650,55 @@ section.checkout {
                         --width: 400px;
                         --height: 300px;
                         margin-inline: auto;
-                        h2{ font-size: 20px;
-    
+
+                        h2 {
+                            font-size: 20px;
+
                         }
+
                         p {
                             font-size: 16px;
                         }
+
                         img {
                             max-width: 260px;
                         }
                     }
-    
+
                     .thumbnails {
                         .thumbnail {
-                            --width:120px;
-                            --height:105px;
+                            --width: 120px;
+                            --height: 105px;
                         }
                     }
                 }
-                .description {
-                  p {
-                    line-height: 150%;
-                    font-size: 1rem;
-                  }  
-                  .specifications {
-                    font-size: 1rem;
-                  }
 
-                  .description-footer {
-                    margin-top: 2rem;
-                    .price {
-                        &>div>span {
-                            
-                            &:first-of-type {
-                                font-size: 20px;
-                            }
-                            &:last-of-type {
-                                font-size: 12px;
+                .description {
+                    p {
+                        line-height: 150%;
+                        font-size: 1rem;
+                    }
+
+                    .specifications {
+                        font-size: 1rem;
+                    }
+
+                    .description-footer {
+                        margin-top: 2rem;
+
+                        .price {
+                            &>div>span {
+
+                                &:first-of-type {
+                                    font-size: 20px;
+                                }
+
+                                &:last-of-type {
+                                    font-size: 12px;
+                                }
                             }
                         }
                     }
-                  }
                 }
 
             }
@@ -1690,41 +1732,47 @@ section.checkout {
         }
     }
 
-        section.details-page {
+    section.details-page {
         .details {
             &>div {
                 .image-gallery {
                     article.preview {
                         --width: 290px;
                         --height: 210px;
-                        
-                        h2{ font-size: 1rem;
-    
+
+                        h2 {
+                            font-size: 1rem;
+
                         }
+
                         p {
                             font-size: 12px;
                         }
+
                         img {
                             max-width: 190px;
                         }
                     }
-    
+
                     .thumbnails {
                         .thumbnail {
-                            --width:82px;
-                            --height:64px;
+                            --width: 82px;
+                            --height: 64px;
                         }
                     }
                 }
+
                 .description {
                     padding: 12px;
-                  p {
-            
-                    font-size: 1rem;
-                  }  
-                  .specifications {
-                    font-size: 1rem;
-                  }
+
+                    p {
+
+                        font-size: 1rem;
+                    }
+
+                    .specifications {
+                        font-size: 1rem;
+                    }
 
                 }
 

@@ -54,6 +54,8 @@ function handleMenuClick() {
 
 
 
+
+
 if (currentPage === 'index') {
 
     console.log('main page');
@@ -77,7 +79,16 @@ if (currentPage === 'index') {
 
     counterElement.textContent = carsArr.length
 
+} else if (currentPage === 'product-details') {
+    const readMoreBtns = document.querySelectorAll("button.read-more-btn")  
+        readMoreBtns.forEach((btn)=>{
+            btn.addEventListener('click', (event)=>{
+            const reviewParagraph = event.target.parentElement.previousElementSibling 
+            reviewParagraph.classList.toggle('expand')
+        })
+    })
 }
+
 
 
 
