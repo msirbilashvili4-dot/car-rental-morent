@@ -1,3 +1,6 @@
+import { cars } from "./data.js"
+
+
 let currentPage = window.location.pathname
 currentPage = currentPage.split('/')[1].split('.html')[0]
 
@@ -57,8 +60,15 @@ function handleMenuClick() {
 
 
 if (currentPage === 'index') {
-
+    const wrapper = document.querySelector('section.testing .wrapper')
     console.log('main page');
+    console.log(cars[0].name);
+    console.log(wrapper)
+    cars.forEach((car) => {
+        const div = document.createElement("div")
+        div.textContent=car.name
+        wrapper.appendChild(div)
+    } )
 
     const pickupDropoffFilter = document.querySelector('section.pickup-dropoff-filter')
 
@@ -88,6 +98,8 @@ if (currentPage === 'index') {
         })
     })
 }
+
+
 
 
 
