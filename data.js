@@ -1,4 +1,4 @@
-export const cars = [
+export const popularCars = [
     {
         name: "Koenigsegg 1",
         type: "Sport",
@@ -43,6 +43,68 @@ export const cars = [
             seats: 2
         }
     },
+
+]
+export const recomendationCars = [
+    {
+        name: "audi 1",
+        type: "Sport",
+        image: "assets/images/koenigsegg.png",
+        price: 99.00, 
+        specifications: {
+            fuelCapacity: 90,
+            transmission: "manual",
+            seats: 2
+        }
+    },
+    {
+        name: "nissan 2",
+        type: "Sport",
+        image: "assets/images/koenigsegg.png",
+        price: 99.00, 
+        specifications: {
+            fuelCapacity: 90,
+            transmission: "manual",
+            seats: 2
+        }
+    },
+    {
+        name: "audi 3",
+        type: "Sport",
+        image: "assets/images/koenigsegg.png",
+        price: 99.00, 
+        specifications: {
+            fuelCapacity: 90,
+            transmission: "manual",
+            seats: 2
+        }
+    },
+    {
+        name: "nissan 4",
+        type: "Sport",
+        image: "assets/images/koenigsegg.png",
+        price: 99.00, 
+        specifications: {
+            fuelCapacity: 90,
+            transmission: "manual",
+            seats: 2
+        }
+    },
+
+]
+
+export const recentCars = [
+    {
+        name: "recent 1",
+        type: "Sport",
+        image: "assets/images/koenigsegg.png",
+        price: 99.00, 
+        specifications: {
+            fuelCapacity: 90,
+            transmission: "manual",
+            seats: 2
+        }
+    },
     {
         name: "Koenigsegg 2",
         type: "Sport",
@@ -55,7 +117,7 @@ export const cars = [
         }
     },
     {
-        name: "Koenigsegg 3",
+        name: "recent 3",
         type: "Sport",
         image: "assets/images/koenigsegg.png",
         price: 99.00, 
@@ -65,6 +127,8 @@ export const cars = [
             seats: 2
         }
     },
+
+
 ]
 
 
