@@ -1,4 +1,5 @@
 export function renderProducts(data, wrapper) {
+    wrapper.innerHTML = ""
     data.forEach((car) => {
         const article = document.createElement("article")
         article.classList.add("card")

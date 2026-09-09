@@ -1,5 +1,5 @@
 import { popularCars, recomendationCars, recentCars } from "./data.js"
-import {renderProducts} from "./functions.js"
+import { renderProducts } from "./functions.js"
 
 
 let currentPage = window.location.pathname
@@ -85,10 +85,30 @@ if (currentPage === 'index') {
 
 } else if (currentPage === 'filter') {
     console.log('filters page');
-    const carsArr = document.querySelectorAll(".wrapper article.card")
+    const searchInput = document.querySelector('#search')
+    const wrapper = document.querySelector('section.filter .wrapper')
     const counterElement = document.querySelector(".counter-wrapper .counter-value")
 
-    counterElement.textContent = carsArr.length
+    renderProducts(recomendationCars, wrapper)
+    counterElement.textContent = popularCars.length
+
+    searchInput.addEventListener('input', (event) => {
+        const searchValue = event.target.value
+        console.log("search : ", event.target.value)
+
+        console.log(searchValue.length)
+        if (searchValue.length > 2) {
+            const searchResults = recomendationCars.filter((car) =>
+                car.name.toLowerCase().includes(searchValue.toLowerCase())
+            );
+            console.log(searchResults)
+            renderProducts(searchResults, wrapper)
+
+        }else if (searchValue.length === 0) {
+            renderProducts(recomendationCars, wrapper)
+        }
+
+    })
 
 } else if (currentPage === 'product-details') {
     const recentCarsWrapper = document.querySelector('section.recent-car .wrapper')
@@ -96,13 +116,13 @@ if (currentPage === 'index') {
     console.log(recomendationCarsWrapper)
 
 
-    const readMoreBtns = document.querySelectorAll("button.read-more-btn") 
-    
+    const readMoreBtns = document.querySelectorAll("button.read-more-btn")
+
     renderProducts(recentCars, recentCarsWrapper)
     renderProducts(recomendationCars, recomendationCarsWrapper)
-        readMoreBtns.forEach((btn)=>{
-            btn.addEventListener('click', (event)=>{
-            const reviewParagraph = event.target.parentElement.previousElementSibling 
+    readMoreBtns.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+            const reviewParagraph = event.target.parentElement.previousElementSibling
             reviewParagraph.classList.toggle('expand')
         })
     })
