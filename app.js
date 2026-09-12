@@ -5,11 +5,11 @@ import { renderProducts } from "./functions.js"
 let currentPage = window.location.pathname
 currentPage = currentPage.split('/')[1].split('.html')[0]
 
-const mobileMenu = document.querySelector('#mobile-menu')
-const ctaWrapper = document.querySelector('.cta-wrapper')
+// const mobileMenu = document.querySelector('#mobile-menu')
+// const ctaWrapper = document.querySelector('.cta-wrapper')
 
 
-mobileMenu.addEventListener('click', handleMenuClick)
+// mobileMenu.addEventListener('click', handleMenuClick)
 
 
 
@@ -29,6 +29,35 @@ function handleMenuClick() {
 
 }
 
+const registerModal = `
+    <div class="modal-overlay flex justify-center align-center">
+        <div class="modal-window">
+            <form class="modal-form">
+                <div class="modal-header">
+                    <h3>
+                        registration form
+                    </h3>
+    
+                </div>
+                <div class="modal-main">
+                    <div>
+                        <label for="firstName"> first name</label>
+                        <input type="text" id="firstName">
+                    </div>
+
+                    <div>
+                        <label for="lastName"> last name</label>
+                        <input type="text" id="lastName">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit"> submit </button>
+                    <button type="button" id="closeModal">cancel</button>
+                </div>            
+            </form>
+        </div>
+    </div>
+`
 
 
 
@@ -60,9 +89,22 @@ function handleMenuClick() {
 
 
 
-if (currentPage === 'index') {
+
+console.log(currentPage)
+if (currentPage === 'index' || currentPage === '') {
     const popularCarsWrapper = document.querySelector('section.popular-car .wrapper')
     const recomendationCarsWrapper = document.querySelector('section.recomendation-car .wrapper')
+    const regButton = document.querySelector('#regButton')
+    regButton.addEventListener("click", () => {
+        document.body.insertAdjacentHTML("beforeend", registerModal)
+        
+            const closeModal = document.querySelector('#closeModal')    
+            closeModal.addEventListener("click", () => {
+                document.querySelector('.modal-overlay').remove()
+            })
+    })
+    
+
 
     console.log('main page');
 
